@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="ltr"] {
+  text-align: left;
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-body-ar);
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  font-family: var(--font-heading-ar);
+}
+
+/* Arabic script doesn't use uppercase letterforms, and added letter-spacing
+   breaks the joined-letter shapes — neutralize both for RTL. */
+[dir="rtl"] .hero-tag,
+[dir="rtl"] .hero-sub,
+[dir="rtl"] .section-tag,
+[dir="rtl"] .stat-label,
+[dir="rtl"] .nav-links a,
+[dir="rtl"] .nav-logo-text,
+[dir="rtl"] .menu-tab,
+[dir="rtl"] .info-block h4,
+[dir="rtl"] footer,
+[dir="rtl"] .scroll-hint,
+[dir="rtl"] .btn-primary,
+[dir="rtl"] .btn-ghost,
+[dir="rtl"] .nav-cta,
+[dir="rtl"] .lang-switch {
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+/* Typography Base */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+button {
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Utility Classes */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-tag {
+  font-size: 0.62rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.section-line {
+  width: 42px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0.9rem 0 2rem;
+}
+
+[dir="rtl"] .section-line {
+  margin-right: 0;
+}
+
+[dir="ltr"] .section-line {
+  margin-left: 0;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--gold);
+  color: var(--bg-primary);
+  padding: 0.8rem 2.2rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.2s;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background: var(--gold-light);
+  color: var(--bg-primary);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 0.8rem 2.2rem;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.2s;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}

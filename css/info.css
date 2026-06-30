@@ -1,0 +1,48 @@
+.info-bar {
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 3rem 0;
+}
+
+.info-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.info-block {
+  text-align: center;
+}
+
+.info-block h4 {
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+
+.info-block p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.info-block a {
+  color: var(--gold);
+  transition: color 0.2s;
+}
+
+.info-block a:hover {
+  color: var(--gold-light);
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .info-inner {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}

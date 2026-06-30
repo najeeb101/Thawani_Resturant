@@ -1,0 +1,13 @@
+footer {
+  background: var(--bg-primary);
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+footer span {
+  color: var(--gold);
+  font-weight: 500;
+}
