@@ -6,13 +6,24 @@
 }
 
 .info-inner {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  max-width: 440px;
+  margin: 0 auto;
 }
 
 .info-block {
   text-align: center;
+  width: 100%;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.info-block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .info-block h4 {
@@ -74,10 +85,3 @@
   align-items: center;
 }
 
-/* Desktop */
-@media (min-width: 769px) {
-  .info-inner {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-  }
-}
