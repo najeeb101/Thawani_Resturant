@@ -47,6 +47,18 @@ nav {
   font-weight: 300;
 }
 
+/* Arabic: use the correct Arabic font */
+[dir="rtl"] .nav-logo-text {
+  font-family: var(--font-heading-ar);
+}
+
+/* Arabic mobile: full name is too long — just show the logo badge */
+@media (max-width: 600px) {
+  [dir="rtl"] .nav-logo-text {
+    display: none;
+  }
+}
+
 /* Mobile defaults */
 .nav-links {
   display: none;
