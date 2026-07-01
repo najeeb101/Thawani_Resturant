@@ -41,6 +41,28 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
+// Theme switching
+const themeSwitch = document.getElementById('themeSwitch');
+
+function setTheme(theme) {
+  if (theme === 'light') {
+    document.documentElement.dataset.theme = 'light';
+  } else {
+    delete document.documentElement.dataset.theme;
+  }
+  localStorage.setItem('thawani-theme', theme);
+}
+
+if (themeSwitch) {
+  themeSwitch.addEventListener('click', () => {
+    const isLight = document.documentElement.dataset.theme === 'light';
+    setTheme(isLight ? 'dark' : 'light');
+  });
+
+  const savedTheme = localStorage.getItem('thawani-theme');
+  if (savedTheme === 'light') setTheme('light');
+}
+
 // Language switching
 const langSwitch = document.getElementById('langSwitch');
 const i18nEls = document.querySelectorAll('[data-i18n]');

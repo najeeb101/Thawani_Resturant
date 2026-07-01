@@ -153,3 +153,18 @@ button {
   color: var(--gold);
 }
 
+/* ── Light-theme fixes ─────────────────────────────────────── */
+
+/* Hero text sits on a dark image overlay — keep it light in both themes */
+html[data-theme="light"] .hero-title { color: #F5F0E8; }
+html[data-theme="light"] .hero-sub   { color: rgba(245, 240, 232, 0.75); }
+html[data-theme="light"] .hero-desc  { color: rgba(245, 240, 232, 0.65); }
+html[data-theme="light"] .scroll-hint { color: rgba(245, 240, 232, 0.5); }
+
+/* Gold buttons use --bg-primary as text; must stay dark on gold */
+html[data-theme="light"] .btn-primary      { color: #1C1814; }
+html[data-theme="light"] .menu-tab.active  { color: #1C1814; }
+
+/* Ghost button border was rgba(white); swap to dark on light bg */
+html[data-theme="light"] .btn-ghost { border-color: rgba(28, 24, 20, 0.2); }
+

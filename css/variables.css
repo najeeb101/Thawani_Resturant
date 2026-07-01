@@ -1,3 +1,21 @@
+/* ── Light theme overrides ─────────────────────────────────── */
+html[data-theme="light"] {
+  --bg-primary:  #F8F5F0;
+  --bg-card:     #EDE8E0;
+  --bg-elevated: #E5DFD5;
+  --bg-nav:      rgba(248, 245, 240, 0.97);
+
+  --text:        #1C1814;
+  --text-muted:  #5A5040;
+  --text-dim:    #8A7B68;
+
+  --border:       rgba(180, 150, 60, 0.28);
+  --border-light: rgba(180, 150, 60, 0.14);
+
+  --badge-pop-bg:    rgba(201, 168, 76, 0.18);
+  --badge-spicy-bg:  rgba(200, 50, 30, 0.14);
+}
+
 :root {
   /* Colors */
   --gold: #C9A84C;
