@@ -155,11 +155,14 @@ button {
 
 /* ── Light-theme fixes ─────────────────────────────────────── */
 
-/* Hero text sits on a dark image overlay — keep it light in both themes */
-html[data-theme="light"] .hero-title { color: #F5F0E8; }
-html[data-theme="light"] .hero-sub   { color: rgba(245, 240, 232, 0.75); }
-html[data-theme="light"] .hero-desc  { color: rgba(245, 240, 232, 0.65); }
-html[data-theme="light"] .scroll-hint { color: rgba(245, 240, 232, 0.5); }
+/* Hero in light mode: lift the dark overlay, use dark text on cream background */
+html[data-theme="light"] .hero-overlay { background: none; }
+html[data-theme="light"] .hero-pattern { opacity: 0.06; }
+html[data-theme="light"] .hero-title   { color: var(--text); }
+html[data-theme="light"] .hero-sub     { color: var(--text-muted); }
+html[data-theme="light"] .hero-desc    { color: var(--text-muted); }
+html[data-theme="light"] .scroll-hint  { color: var(--text-dim); }
+html[data-theme="light"] .hero-tag     { border-color: var(--gold-dim); }
 
 /* Gold buttons use --bg-primary as text; must stay dark on gold */
 html[data-theme="light"] .btn-primary      { color: #1C1814; }
