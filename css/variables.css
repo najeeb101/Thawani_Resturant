@@ -7,7 +7,7 @@ html[data-theme="light"] {
 
   --text:        #1C1814;
   --text-muted:  #5A5040;
-  --text-dim:    #8A7B68;
+  --text-dim:    #6B5D4A; /* 4.8:1+ on light backgrounds */
 
   --border:       rgba(180, 150, 60, 0.28);
   --border-light: rgba(180, 150, 60, 0.14);
@@ -29,7 +29,7 @@ html[data-theme="light"] {
   
   --text: #F5F0E8;
   --text-muted: #A09070;
-  --text-dim: #6B5D4A;
+  --text-dim: #9A8870; /* 4.6:1+ on dark backgrounds */
   
   --border: rgba(201, 168, 76, 0.18);
   --border-light: rgba(201, 168, 76, 0.08);
